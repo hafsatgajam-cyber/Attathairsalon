@@ -27,6 +27,7 @@ const rows: Row[] = [
   [304, 3, "Wig revamp", "Wash, condition and restyle your wig.", 8000, null, 90, 0],
   [401, 4, "Starter locs", "Comb coils or two-strand starter locs.", 25000, 40000, 240, 5000],
   [402, 4, "Loc retwist", "Retwist and simple style.", 10000, 15000, 120, 0],
+  [403, 4, "Small locs", "Small starter locs on a neat parted grid.", 30000, 50000, 300, 5000],
   [501, 5, "Relaxer + styling", "Retouch relaxer, treatment and style.", 8000, 12000, 90, 0],
   [502, 5, "Deep conditioning", "Steam treatment for strong, soft hair.", 6000, null, 60, 0],
   [503, 5, "Silk press", "Wash, blow-dry and silk press.", 10000, 15000, 90, 0],

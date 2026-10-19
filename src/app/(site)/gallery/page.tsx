@@ -7,7 +7,7 @@ import { getGallery } from "@/lib/catalog";
 export const revalidate = 300;
 export const metadata: Metadata = { title: "Gallery", description: "Braids, wigs, locs and more done at Attat Hair Saloon." };
 
-const placeholderStyles = ["Knotless braids", "Boho braids", "Stitch braids", "Frontal install", "Starter locs", "Silk press", "Ghana weaving", "Kids braids"];
+const placeholderStyles = ["Knotless braids", "Boho braids", "Frontal install", "Small locs", "Silk press", "Ghana weaving", "Stitch braids", "Kids braids"];
 
 export default async function GalleryPage({ searchParams }: { searchParams: Promise<{ style?: string }> }) {
   const { style } = await searchParams;

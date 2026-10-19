@@ -7,7 +7,7 @@ import { formatDuration, formatNaira } from "@/lib/format";
 
 export const revalidate = 300;
 
-const featured = ["Knotless braids (medium)", "Frontal wig install", "Stitch braids", "Starter locs"];
+const featured = ["Knotless braids (medium)", "Frontal wig install", "Boho braids", "Small locs"];
 
 const steps = [
   { title: "Pick your style", text: "Choose from braids, wigs, locs and more, with clear prices in Naira." },

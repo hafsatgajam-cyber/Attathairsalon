@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { PageHeader } from "@/components/PageHeader";
+import { photoFocus, photoFor } from "@/components/StyleTile";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 import { getCatalog } from "@/lib/catalog";
 import { whatsappLink } from "@/lib/config";
@@ -41,8 +43,14 @@ export default async function ServicesPage() {
             <section key={c.id} id={c.slug} className="scroll-mt-32">
               <h2 className="font-serif text-3xl font-semibold text-olive-900">{c.name}</h2>
               <ul className="mt-5 divide-y divide-cream-dark overflow-hidden rounded-2xl bg-white ring-1 ring-cream-dark">
-                {items.map((s) => (
+                {items.map((s) => {
+                  const photo = photoFor(s.name);
+                  return (
                   <li key={s.id} className="flex flex-col gap-3 p-5 sm:flex-row sm:items-center sm:justify-between">
+                    <div className="flex items-start gap-4">
+                    {photo && (
+                      <Image src={photo} alt={s.name} width={72} height={96} className="h-24 w-[72px] shrink-0 rounded-xl object-cover" style={{ objectPosition: photoFocus(s.name) }} />
+                    )}
                     <div>
                       <p className="font-semibold text-olive-900">{s.name}</p>
                       {s.description && <p className="mt-1 text-sm text-ink/70">{s.description}</p>}
@@ -52,12 +60,14 @@ export default async function ServicesPage() {
                         <span>{s.hair_included ? "Hair included" : "Hair not included"}</span>
                       </p>
                     </div>
+                    </div>
                     <div className="flex items-center gap-4 sm:flex-col sm:items-end sm:gap-2">
                       <p className="font-semibold whitespace-nowrap text-ink">{formatPrice(s.price_min, s.price_max)}</p>
                       <Link href={`/book?service=${s.id}`} className="btn btn-primary px-4 py-2 text-sm">Book</Link>
                     </div>
                   </li>
-                ))}
+                  );
+                })}
               </ul>
             </section>
           );

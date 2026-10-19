@@ -2,10 +2,19 @@ import Image from "next/image";
 
 // Real photos for styles, matched by the start of the label (case-insensitive).
 // Add a photo to public/styles/ and a line here to use it everywhere.
-const photos: [prefix: string, src: string][] = [["knotless", "/styles/knotless.jpg"]];
+// The third value is the crop focus (CSS object-position) so the hair stays in frame.
+const photos: [prefix: string, src: string, focus: string][] = [
+  ["knotless", "/styles/knotless.jpg", "50% 15%"],
+  ["boho", "/styles/boho.jpg", "50% 30%"],
+  ["small locs", "/styles/small-locs.jpg", "50% 40%"],
+  ["silk press", "/styles/silk-press.jpg", "50% 45%"],
+  ["ghana", "/styles/ghana.jpg", "50% 35%"],
+  ["frontal", "/styles/frontal.jpg", "50% 30%"],
+];
 
-export const photoFor = (label: string) =>
-  photos.find(([prefix]) => label.toLowerCase().startsWith(prefix))?.[1];
+const match = (label: string) => photos.find(([prefix]) => label.toLowerCase().startsWith(prefix));
+export const photoFor = (label: string) => match(label)?.[1];
+export const photoFocus = (label: string) => match(label)?.[2] ?? "50% 20%";
 
 // Placeholder artwork for styles without a photo yet.
 const palettes = [
@@ -37,7 +46,8 @@ export function StyleTile({
           fill
           priority={priority}
           sizes="(min-width: 1024px) 25vw, 50vw"
-          className="object-cover object-top"
+          className="object-cover"
+          style={{ objectPosition: photoFocus(label) }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0" aria-hidden="true" />
         <span className="relative font-serif text-xl font-semibold drop-shadow">{label}</span>
