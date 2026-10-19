@@ -1,4 +1,13 @@
-// Placeholder artwork for a hairstyle until real photos are uploaded.
+import Image from "next/image";
+
+// Real photos for styles, matched by the start of the label (case-insensitive).
+// Add a photo to public/styles/ and a line here to use it everywhere.
+const photos: [prefix: string, src: string][] = [["knotless", "/styles/knotless.jpg"]];
+
+export const photoFor = (label: string) =>
+  photos.find(([prefix]) => label.toLowerCase().startsWith(prefix))?.[1];
+
+// Placeholder artwork for styles without a photo yet.
 const palettes = [
   ["#48582b", "#2a3419"],
   ["#a8813f", "#6b4f22"],
@@ -6,7 +15,36 @@ const palettes = [
   ["#7a5c3a", "#2a1d14"],
 ];
 
-export function StyleTile({ label, index = 0, className = "" }: { label: string; index?: number; className?: string }) {
+export function StyleTile({
+  label,
+  index = 0,
+  className = "",
+  priority = false,
+}: {
+  label: string;
+  index?: number;
+  className?: string;
+  priority?: boolean;
+}) {
+  const photo = photoFor(label);
+
+  if (photo) {
+    return (
+      <div className={`relative flex items-end overflow-hidden rounded-2xl p-4 text-cream ${className}`}>
+        <Image
+          src={photo}
+          alt={`${label} hairstyle by Attat Hair Saloon`}
+          fill
+          priority={priority}
+          sizes="(min-width: 1024px) 25vw, 50vw"
+          className="object-cover object-top"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0" aria-hidden="true" />
+        <span className="relative font-serif text-xl font-semibold drop-shadow">{label}</span>
+      </div>
+    );
+  }
+
   const [a, b] = palettes[index % palettes.length];
   return (
     <div

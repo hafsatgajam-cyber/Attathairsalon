@@ -46,7 +46,7 @@ export default async function Home() {
             </div>
           </div>
           <div className="grid grid-cols-2 gap-3">
-            <StyleTile label="Knotless" index={1} className="aspect-[3/4]" />
+            <StyleTile label="Knotless" index={1} className="aspect-[3/4]" priority />
             <StyleTile label="Frontals" index={3} className="mt-8 aspect-[3/4]" />
           </div>
         </div>
