@@ -10,6 +10,7 @@ const photos: [prefix: string, src: string, focus: string][] = [
   ["silk press", "/styles/silk-press.jpg", "50% 45%"],
   ["ghana", "/styles/ghana.jpg", "50% 35%"],
   ["frontal", "/styles/frontal.jpg", "50% 30%"],
+  ["stitch", "/styles/stitch.jpg", "50% 25%"],
 ];
 
 const match = (label: string) => photos.find(([prefix]) => label.toLowerCase().startsWith(prefix));
