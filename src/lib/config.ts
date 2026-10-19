@@ -5,7 +5,7 @@ export const salon = {
   logo: "/logo.png" as string | null, // set to null to show the "A" monogram instead
   address: "Lagos, Nigeria", // TODO: full street address
   mapsQuery: "Attat Hair Saloon Lagos",
-  phone: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "2349132448863", // WhatsApp + calls
+  phone: "2349132448863", // WhatsApp + calls, international format without +
   phoneDisplay: "0913 244 8863",
   instagram: "https://instagram.com/", // TODO: salon handle
   cancellationHours: 24,

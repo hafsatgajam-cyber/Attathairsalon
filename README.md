@@ -54,7 +54,7 @@ Without a key, bookings are confirmed straight away with no deposit.
 
 ### 4. WhatsApp Cloud API (optional)
 
-Click-to-chat works with just `NEXT_PUBLIC_WHATSAPP_NUMBER`. For automatic confirmations and reminders:
+Click-to-chat uses the number in [`src/lib/config.ts`](src/lib/config.ts) and needs no setup. For automatic confirmations and reminders:
 
 1. Set up the WhatsApp Business Platform in Meta Business Manager and get a permanent token and phone number ID.
 2. Create two **utility** message templates (language `en`) and get them approved:
