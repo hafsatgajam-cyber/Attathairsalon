@@ -19,7 +19,8 @@ export async function Footer() {
         </div>
         <div className="flex flex-col gap-2 text-sm">
           <p className="eyebrow mb-1">Get in touch</p>
-          <a href={whatsappLink("Hi Attat Hair Saloon 👋")} className="hover:text-cream">WhatsApp: +{salon.phone}</a>
+          <a href={whatsappLink("Hi Attat Hair Saloon 👋")} className="hover:text-cream">WhatsApp: {salon.phoneDisplay}</a>
+          <a href={`tel:+${salon.phone}`} className="hover:text-cream">Call: {salon.phoneDisplay}</a>
           <a href={salon.instagram} className="hover:text-cream">Instagram</a>
           <Link href="/book" className="hover:text-cream">Book an appointment</Link>
           <Link href="/privacy" className="hover:text-cream">Privacy policy</Link>

@@ -24,6 +24,10 @@ export default async function ContactPage() {
             </a>
           </div>
           <div className="rounded-2xl bg-white p-6 ring-1 ring-cream-dark">
+            <p className="eyebrow">Phone & WhatsApp</p>
+            <a href={`tel:+${salon.phone}`} className="mt-2 block text-lg font-semibold text-olive-800">{salon.phoneDisplay}</a>
+          </div>
+          <div className="rounded-2xl bg-white p-6 ring-1 ring-cream-dark">
             <p className="eyebrow mb-3">Opening hours</p>
             <HoursList hours={hours} />
           </div>

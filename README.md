@@ -64,7 +64,7 @@ Click-to-chat works with just `NEXT_PUBLIC_WHATSAPP_NUMBER`. For automatic confi
 
 ### 5. Branding
 
-- **Logo:** save it as `public/logo.png`, then set `logo: "/logo.png"` in [`src/lib/config.ts`](src/lib/config.ts).
+- **Logo:** `public/logo.png` (header, footer, admin) and `src/app/icon.png` (browser tab). Replace those files to change it.
 - **Salon details** (address, Instagram, cancellation window): [`src/lib/config.ts`](src/lib/config.ts).
 - **Colours** (olive green, cream and gold): [`src/app/globals.css`](src/app/globals.css).
 - **Gallery photos:** add rows to the `gallery_images` table (image URL + style). Supabase Storage public URLs work.
