@@ -176,7 +176,7 @@ export function BookingForm({ catalog, initialServiceId, today, bookingEnabled, 
           <h2 className="flex items-center gap-3 font-serif text-2xl font-semibold text-olive-900">
             <Step n={2} /> Pick a date & time
           </h2>
-          <fieldset disabled={!selected.length} className="mt-5 space-y-6">
+          <fieldset disabled={!selected.length} className="mt-5 min-w-0 space-y-6">
             <div>
               <p className="mb-2 text-sm font-semibold">Stylist</p>
               <div className="flex flex-wrap gap-2">
@@ -233,7 +233,7 @@ export function BookingForm({ catalog, initialServiceId, today, bookingEnabled, 
           <h2 className="flex items-center gap-3 font-serif text-2xl font-semibold text-olive-900">
             <Step n={3} /> Your details
           </h2>
-          <fieldset disabled={!time} className="mt-5 grid gap-4 sm:grid-cols-2">
+          <fieldset disabled={!time} className="mt-5 grid min-w-0 gap-4 sm:grid-cols-2">
             <label className="block text-sm font-semibold">
               Full name
               <input className="field mt-1 font-normal" required autoComplete="name" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} />
