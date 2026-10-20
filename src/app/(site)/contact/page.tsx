@@ -32,7 +32,7 @@ export default async function ContactPage() {
             <HoursList hours={hours} />
           </div>
           <div className="flex flex-wrap gap-3">
-            <a href={whatsappLink("Hi Attat Hair Saloon 👋")} target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp">
+            <a href={whatsappLink("Hi Attat Hair Saloon")} target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp">
               <WhatsAppIcon /> WhatsApp us
             </a>
             <Link href="/book" className="btn btn-primary">Book now</Link>

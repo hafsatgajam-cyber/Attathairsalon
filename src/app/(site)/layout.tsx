@@ -10,7 +10,7 @@ const jsonLd = {
   name: salon.name,
   url: siteUrl,
   telephone: `+${salon.phone}`,
-  address: { "@type": "PostalAddress", addressLocality: "Lagos", addressCountry: "NG" },
+  address: { "@type": "PostalAddress", addressLocality: "Abuja", addressCountry: "NG" },
   priceRange: "₦₦",
 };
 

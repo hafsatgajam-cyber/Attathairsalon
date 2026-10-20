@@ -124,7 +124,7 @@ export function BookingForm({ catalog, initialServiceId, today, bookingEnabled, 
     }
   }
 
-  const waMessage = `Hi Attat Hair Saloon 👋 I'd like to book: ${chosen.map((s) => s.name).join(", ") || "an appointment"}${date ? ` on ${date}` : ""}${time ? ` at ${to12h(time)}` : ""}.`;
+  const waMessage = `Hi Attat Hair Saloon, I'd like to book: ${chosen.map((s) => s.name).join(", ") || "an appointment"}${date ? ` on ${date}` : ""}${time ? ` at ${to12h(time)}` : ""}.`;
   const canSubmit = selected.length > 0 && date && time && form.name.trim().length > 1 && form.phone.trim() && (!needsDeposit || form.email.trim());
 
   return (

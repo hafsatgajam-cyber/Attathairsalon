@@ -35,12 +35,12 @@ export default async function Home() {
               <span className="text-gold-light italic">booked in minutes.</span>
             </h1>
             <p className="mt-6 max-w-lg text-lg text-cream/80">
-              Braids, cornrows, wig installs, locs and natural hair care in Lagos. See our prices,
+              Braids, cornrows, wig installs, locs and natural hair care in Abuja. See our prices,
               book online and chat with us on WhatsApp any time.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link href="/book" className="btn bg-gold text-ink hover:bg-gold-light">Book an appointment</Link>
-              <a href={whatsappLink("Hi Attat Hair Saloon 👋 I'd like to make an enquiry.")} target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp">
+              <a href={whatsappLink("Hi Attat Hair Saloon, I'd like to make an enquiry.")} target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp">
                 <WhatsAppIcon /> Chat on WhatsApp
               </a>
             </div>
@@ -99,7 +99,7 @@ export default async function Home() {
             <h2 className="font-serif text-3xl font-semibold">Have a question? Ask us on WhatsApp.</h2>
             <p className="mt-2 text-cream/75">Prices, hair to bring, directions: we reply fast.</p>
           </div>
-          <a href={whatsappLink("Hi Attat Hair Saloon 👋")} target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp shrink-0">
+          <a href={whatsappLink("Hi Attat Hair Saloon")} target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp shrink-0">
             <WhatsAppIcon /> Message us
           </a>
         </div>
